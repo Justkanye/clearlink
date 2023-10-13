@@ -1,7 +1,9 @@
+import Hero from "@/components/pages/landing/Hero";
+
 const Home = () => {
   return (
-    <main>
-      <div>ClearLink</div>
+    <main className='pb-20'>
+      <Hero />
     </main>
   );
 };
