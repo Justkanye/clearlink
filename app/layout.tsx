@@ -1,7 +1,12 @@
-import Navbar from "@/components/layout/Navbar";
 import "./globals.css";
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+
+import Navbar from "@/components/layout/Navbar";
+import TailwindIndicator from "@/components/layout/tailwind-indicator";
+import MotionProvider from "@/components/layout/framer-motion/MotionProvider";
+import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,12 +22,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
-        <div className='container mx-auto pt-10 lg:max-w-6xl'>
-          <Navbar />
-          {children}
-        </div>
-      </body>
+      <MotionProvider>
+        <body className={cn(inter.className, "overflow-x-hidden")}>
+          <div className='container mx-auto pt-10 lg:max-w-6xl'>
+            <Navbar />
+            {children}
+          </div>
+          <TailwindIndicator />
+        </body>
+      </MotionProvider>
     </html>
   );
 }
