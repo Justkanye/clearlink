@@ -19,7 +19,7 @@ const BrandLink = () => {
           fill='#53B1FD'
         />
       </svg>
-      <h6 className='text-gray-900 text-2xl font-semibold'>ClearLink</h6>
+      <h1 className='text-gray-900 text-2xl font-semibold'>ClearLink</h1>
     </Link>
   );
 };

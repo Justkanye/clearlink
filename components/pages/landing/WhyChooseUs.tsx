@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const WhyChooseUs = () => {
   return (
-    <section className='py-24'>
+    <section id='why-us' className='py-24'>
       <div className='mb-20'>
         <p className='text-blue-700 text-lg font-semibold'>
           The ClearLink Advantage
