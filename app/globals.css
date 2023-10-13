@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    background-image: url('/assets/icons/Background\ pattern.svg');
+    background-repeat: no-repeat;
+}
