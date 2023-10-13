@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { heroGalleryIcons, heroGalleryImages } from "@/lib/constants/hero";
+import { altFromImgUrl } from "@/lib/utils";
 
 const HeroGallery = () => {
   return (
@@ -26,7 +27,7 @@ const HeroGallery = () => {
           >
             <Image
               src={icon}
-              alt={icon.split("/").pop()?.replace(".svg", "") || icon}
+              alt={altFromImgUrl(icon)}
               width={20}
               height={20}
             />
