@@ -55,7 +55,7 @@ const Navbar = () => {
         })}
       </ul>
       <div className='flex items-center gap-2'>
-        <Button className='bg-white border border-gray-100 text-gray-900'>
+        <Button className='bg-white border border-gray-400 text-gray-900'>
           Talk to sales
         </Button>
         <Button>Sign up for free</Button>
