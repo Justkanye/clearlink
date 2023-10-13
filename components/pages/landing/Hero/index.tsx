@@ -6,7 +6,7 @@ import HeroGallery from "./HeroGallery";
 
 const Hero = () => {
   return (
-    <section className='flex flex-col md:flex-row gap-5 items-center justify-between mt-40'>
+    <section className='flex flex-col md:flex-row gap-5 items-center justify-between mt-40 pb-24'>
       <div className='flex flex-col gap-12'>
         <div className='flex flex-col gap-6'>
           <h2 className='text-gray-800 text-[64px] leading-[72px] font-semibold'>
