@@ -20,7 +20,7 @@ const Hero = () => {
             simplicity.
           </p>
         </div>
-        <div className='flex items-center gap-5'>
+        <div className='flex max-md:flex-col items-center gap-5'>
           <Button>Start your free trial</Button>
           <div className='flex items-center gap-3 text-blue-700 cursor-pointer'>
             <Image src='/assets/icons/AI.svg' alt='AI' width={20} height={20} />

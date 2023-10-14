@@ -54,7 +54,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className='relative flex justify-between py-12'>
+      <div className='relative flex justify-between py-12 max-md:flex-col'>
         <div className='bg-gray-50 absolute top-0 bottom-0 -right-1/2 -left-1/2 -z-10' />
         <p className='text-gray-500 text-base'>
           © 2023 ClearLink. All rights reserved.

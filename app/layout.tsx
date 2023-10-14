@@ -16,8 +16,7 @@ export const metadata: Metadata = {
     default: "ClearLink",
     template: "%s | ClearLink",
   },
-  description:
-    "ClearLink is your gateway to effortless, high-quality video conferencing. Join us in shaping the future of communication!",
+  description: "Your gateway to effortless video conferencing.",
   openGraph: {
     images: "/assets/images/logo.png",
   },
@@ -31,8 +30,10 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <MotionProvider>
-        <body className={cn(inter.className, "overflow-x-hidden")}>
-          <div className='container mx-auto pt-10 lg:max-w-6xl max-md:px-2'>
+        <body
+          className={cn(inter.className, "overflow-x-hidden max-w-[100vw]")}
+        >
+          <div className='container mx-auto pt-10 lg:max-w-6xl max-md:px-4'>
             <Navbar />
             {children}
             <Footer />

@@ -28,7 +28,7 @@ const Testimonials = () => {
           top-notch security make it essential for our team.
         </h2>
         <div className='flex gap-1 max-md:justify-between'>
-          <div className='flex gap-4'>
+          <div className='flex gap-4 max-md:flex-wrap'>
             <Image
               src='/assets/images/Avatar.png'
               alt='Sarah'
