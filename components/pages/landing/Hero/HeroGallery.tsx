@@ -6,17 +6,20 @@ import { altFromImgUrl } from "@/lib/utils";
 const HeroGallery = () => {
   return (
     <div className='flex p-8 flex-col justify-center items-center gap-10 rounded-2xl border border-blue-200 bg-blue-50 shadow-2xl'>
-      <div className='grid grid-cols-2 md:grid-cols-3 gap-5'>
+      <div className='grid grid-cols-3 gap-5'>
         {heroGalleryImages.map(img => (
-          <Image
+          <div
             key={img.bg}
-            src={img.src}
-            alt='user in video call'
-            width={160}
-            height={160}
-            className='rounded-xl'
             style={{ backgroundColor: img.bg }}
-          />
+            className='rounded-xl overflow-hidden flex items-end justify-center'
+          >
+            <Image
+              src={img.src}
+              alt='user in video call'
+              width={160}
+              height={160}
+            />
+          </div>
         ))}
       </div>
       <div className='flex items-start gap-4'>
