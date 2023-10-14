@@ -31,7 +31,7 @@ const CTA = () => {
         </div>
       </div>
       <div className='relative'>
-        <div className='absolute flex-[1] -right-[18%]'>
+        <div className='md:absolute flex-[1] -right-[18%]'>
           <Image
             src='/assets/images/Screen mockup.png'
             alt='Screen mockup'
