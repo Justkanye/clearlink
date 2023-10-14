@@ -1,5 +1,6 @@
 import CompaniesThatTrustUs from "@/components/pages/landing/CompaniesThatTrustUs";
 import Hero from "@/components/pages/landing/Hero";
+import Testimonials from "@/components/pages/landing/Testimonials";
 import WhyChooseUs from "@/components/pages/landing/WhyChooseUs";
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
       <Hero />
       <CompaniesThatTrustUs />
       <WhyChooseUs />
+      <Testimonials />
     </main>
   );
 };
