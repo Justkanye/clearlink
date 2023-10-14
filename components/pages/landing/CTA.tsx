@@ -27,7 +27,7 @@ const CTA = () => {
           <Button className='bg-white border border-gray-400 text-gray-900'>
             Talk to sales
           </Button>
-          <Button>Sign up for free</Button>
+          <Button>Start your free trial</Button>
         </div>
       </div>
       <div className='relative'>

@@ -12,7 +12,10 @@ const Faqs = () => {
         <p className='text-gray-500 text-2xl'>
           Everything you need to know about the product and billing. Can’t find
           the answer you’re looking for?{" "}
-          <span className='underline'>Please chat to our friendly team</span>.
+          <span className='underline cursor-pointer'>
+            Please chat to our friendly team
+          </span>
+          .
         </p>
       </div>
 
