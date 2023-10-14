@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang='en'>
       <MotionProvider>
         <body className={cn(inter.className, "overflow-x-hidden")}>
-          <div className='container mx-auto pt-10 lg:max-w-6xl'>
+          <div className='container mx-auto pt-10 lg:max-w-6xl max-md:px-2'>
             <Navbar />
             {children}
           </div>

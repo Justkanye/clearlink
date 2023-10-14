@@ -4,16 +4,17 @@ import BrandLink from "@/components/shared/BrandLink";
 import Dropdown from "@/components/shared/Dropdown";
 import { Menu } from "@headlessui/react";
 
-import { cn } from "@/lib/utils";
-import { navLinks } from "@/lib/constants/navigation";
 import Link from "next/link";
+
+import { cn } from "@/lib/utils";
 import Button from "@/components/shared/Button";
+import { navLinks } from "@/lib/constants/navigation";
 
 const Navbar = () => {
   return (
     <nav className='flex items-center justify-between px-8 py-4 rounded-full bg-gray-100 border border-gray-300'>
       <BrandLink />
-      <ul className='flex items-center gap-2'>
+      <ul className='hidden md:flex items-center gap-2'>
         {navLinks.map(link => {
           if (link.sublinks)
             return (
@@ -54,7 +55,7 @@ const Navbar = () => {
           );
         })}
       </ul>
-      <div className='flex items-center gap-2'>
+      <div className='hidden md:flex items-center gap-2'>
         <Button className='bg-white border border-gray-400 text-gray-900'>
           Talk to sales
         </Button>

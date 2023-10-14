@@ -10,8 +10,7 @@ const Hero = () => {
       <div className='flex flex-col gap-12 max-md:items-center max-md:text-center'>
         <div className='flex flex-col gap-6'>
           <h2 className='text-gray-800 text-[64px] leading-[72px] font-semibold -tracking-[1.28px]'>
-            Uniting the world,
-            <br className='max-md:hidden' />
+            Uniting the world, <br className='max-md:hidden' />
             one video call at a time
           </h2>
           <p className='text-gray-500 text-2xl'>
