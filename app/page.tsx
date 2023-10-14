@@ -1,3 +1,4 @@
+import CTA from "@/components/pages/landing/CTA";
 import CompaniesThatTrustUs from "@/components/pages/landing/CompaniesThatTrustUs";
 import Faqs from "@/components/pages/landing/Faqs";
 import Hero from "@/components/pages/landing/Hero";
@@ -12,6 +13,7 @@ const Home = () => {
       <WhyChooseUs />
       <Testimonials />
       <Faqs />
+      <CTA />
     </main>
   );
 };
