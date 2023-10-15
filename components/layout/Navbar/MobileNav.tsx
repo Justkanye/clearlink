@@ -51,7 +51,7 @@ const MobileNav = ({
             className='flex-[1] h-full bg-gray-800 opacity-50'
             onClick={toggleModal}
           />
-          <div className='flex flex-col items-end justify-center w-1/2 pr-[10%] h-full bg-white gap-6'>
+          <div className='flex flex-col items-end justify-center w-1/2 pl-2 pr-[10%] h-full bg-white gap-6'>
             {children}
           </div>
         </div>
