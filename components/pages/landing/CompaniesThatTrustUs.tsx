@@ -1,4 +1,10 @@
+import Image from "next/image";
+
+import MotionContainer from "@/components/layout/framer-motion/MotionContainer";
 import CompanyCarousel from "./CompanyCarousel";
+import { carousel } from "@/lib/helpers/motion";
+import { companiesThatTrustUs } from "@/lib/constants/companiesThatTrustUs";
+import { altFromImgUrl } from "@/lib/utils";
 
 const CompaniesThatTrustUs = () => {
   return (
@@ -6,7 +12,7 @@ const CompaniesThatTrustUs = () => {
       <p className='text-gray-600 text-xl font-medium text-center mb-12'>
         Join 1,500+ companies already video conferencing the ClearLink way
       </p>
-      {/* <div className='mt-12 relative'>
+      <div className='mt-12 relative max-md:hidden'>
         <MotionContainer
           className='flex items-center gap-[69px] mt-12 transition-transform'
           variants={carousel({})}
@@ -20,8 +26,10 @@ const CompaniesThatTrustUs = () => {
             />
           ))}
         </MotionContainer>
-      </div> */}
-      <CompanyCarousel />
+      </div>
+      <div className='md:hidden'>
+        <CompanyCarousel />
+      </div>
     </section>
   );
 };
