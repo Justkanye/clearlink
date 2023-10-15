@@ -13,8 +13,16 @@ import MobileNav from "./MobileNav";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const toggleModal = () => setIsOpen(prev => !prev);
-  const closeModal = () => setIsOpen(false);
+  const toggleModal = () => {
+    setIsOpen(prev => !prev);
+    const body = document.querySelector("body");
+    body.classList.toggle("overflow-hidden");
+  };
+  const closeModal = () => {
+    setIsOpen(false);
+    const body = document.querySelector("body");
+   body.classList.toggle("overflow-hidden");
+  };
 
   return (
     <nav className='flex items-center justify-between px-8 py-4 rounded-full bg-gray-100 border border-gray-300 max-md:py-0'>
