@@ -33,7 +33,7 @@ export default function RootLayout({
         <body
           className={cn(inter.className, "overflow-x-hidden max-w-[100vw]")}
         >
-          <div className='container mx-auto pt-10 lg:max-w-6xl max-md:px-4'>
+          <div className='mx-auto pt-10 lg:max-w-6xl max-lg:px-4'>
             <Navbar />
             {children}
             <Footer />
