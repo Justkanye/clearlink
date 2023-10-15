@@ -3,6 +3,49 @@
 @tailwind utilities;
 
 body {
-    background-image: url('/assets/icons/Background\ pattern.svg');
-    background-repeat: no-repeat;
+  background-image: url("/assets/icons/Background\ pattern.svg");
+  background-repeat: no-repeat;
+}
+
+/* Mobile */
+.hamburger {
+  width: 70px;
+  height: 70px;
+  padding: 20px;
+  @apply relative flex-col justify-between cursor-pointer inline-flex;
+}
+.hamburger .hamburger-line {
+  height: 3px;
+  border-radius: 6px;
+  transition: transform 0.4s cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  @apply w-full bg-gray-500 block relative z-10;
+}
+.hamburger .hamburger-line.first,
+.hamburger .hamburger-line.third {
+  @apply w-1/2;
+}
+.hamburger .hamburger-line.third {
+  margin-left: 50%;
+  transform-origin: left;
+}
+
+.menu-button-wrapper {
+  @apply inline-block md:hidden;
+  z-index: 1000;
+}
+/* Open classes */
+.menu-button-wrapper.open {
+  @apply border-gray-500 rounded-full border;
+}
+.menu-button-wrapper.open .icon-wrapper .hamburger-line.second {
+  transform: rotate(-45deg);
+}
+.menu-button-wrapper.open .icon-wrapper .hamburger-line.first {
+  transform: translate(2px, 8px) rotate(-135deg);
+}
+.menu-button-wrapper.open .icon-wrapper .hamburger-line.third {
+  transform: translate(11px, -3px) rotate(-135deg);
+}
+.menu-button-wrapper.open .icon-wrapper .hamburger:before {
+  transform: rotate(45deg);
 }
