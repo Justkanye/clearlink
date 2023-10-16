@@ -3,6 +3,7 @@ import Image from "next/image";
 import Button from "@/components/shared/Button";
 import Rating from "@/components/shared/Rating";
 import HeroGallery from "./HeroGallery";
+import HeroUserAvatars from "./HeroUserAvatars";
 
 const Hero = () => {
   return (
@@ -29,12 +30,7 @@ const Hero = () => {
         </div>
         {/* reviews */}
         <div className='flex items-center gap-4'>
-          <Image
-            src='/assets/images/Avatar group.png'
-            alt='users'
-            width={152}
-            height={40}
-          />
+          <HeroUserAvatars />
           <div className='flex flex-col items-start gap-1'>
             <div className='flex items-center gap-2'>
               <Rating rating={5} />
