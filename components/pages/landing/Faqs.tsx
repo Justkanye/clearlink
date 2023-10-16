@@ -1,5 +1,7 @@
+import MotionContainer from "@/components/layout/framer-motion/MotionContainer";
 import Accordion from "@/components/shared/Accordion";
 import { faqs } from "@/lib/constants/faq";
+import { fadeIn } from "@/lib/helpers/motion";
 
 const Faqs = () => {
   return (
@@ -21,16 +23,20 @@ const Faqs = () => {
 
       <div className='md:col-span-3'>
         {faqs.map(({ answer, question }, i) => (
-          <Accordion
+          <MotionContainer
             key={question}
-            title={
-              <h3 className='font-semibold text-gray-900 text-xl text-left'>
-                {question}
-              </h3>
-            }
-            content={<p className='text-gray-600 text-lg'>{answer}</p>}
-            divider={i !== faqs.length - 1}
-          />
+            variants={fadeIn("left", "tween", i / 5 || 0.2, 0.5)}
+          >
+            <Accordion
+              title={
+                <h3 className='font-semibold text-gray-900 text-xl text-left'>
+                  {question}
+                </h3>
+              }
+              content={<p className='text-gray-600 text-lg'>{answer}</p>}
+              divider={i !== faqs.length - 1}
+            />
+          </MotionContainer>
         ))}
       </div>
     </section>

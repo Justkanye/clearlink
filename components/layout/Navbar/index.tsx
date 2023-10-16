@@ -21,7 +21,7 @@ const Navbar = () => {
   const closeModal = () => {
     setIsOpen(false);
     const body = document.querySelector("body");
-   body?.classList.toggle("overflow-hidden");
+    body?.classList.toggle("overflow-hidden");
   };
 
   return (

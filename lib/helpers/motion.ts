@@ -49,8 +49,8 @@ export const fadeIn = (
 export const zoomIn = (delay: number, duration: number): Variants => {
   return {
     hidden: {
-      scale: 0,
-      opacity: 0,
+      scale: 0.5,
+      opacity: 0.5,
     },
     show: {
       scale: 1,
@@ -78,6 +78,34 @@ export const progress = (
       width: `${width}%`,
       transition: {
         type: "tween",
+        delay: delay,
+        duration: duration,
+        ease: "easeOut",
+      },
+    },
+  };
+};
+
+export const rollIn = (
+  direction: Direction,
+  type: string,
+  delay: number,
+  duration: number,
+  distance = 200
+) => {
+  return {
+    hidden: {
+      x:
+        direction === "left" ? distance : direction === "right" ? -distance : 0,
+      y: direction === "up" ? distance : direction === "down" ? -distance : 0,
+      rotate: 0,
+    },
+    show: {
+      x: 0,
+      y: 0,
+      rotate: direction === "left" ? -360 : 360,
+      transition: {
+        type: type,
         delay: delay,
         duration: duration,
         ease: "easeOut",

@@ -2,6 +2,9 @@ import { MdCheckCircleOutline } from "react-icons/md";
 
 import Button from "@/components/shared/Button";
 import Image from "next/image";
+import Typewriter from "@/components/shared/Typewriter";
+import MotionContainer from "@/components/layout/framer-motion/MotionContainer";
+import { fadeIn } from "@/lib/helpers/motion";
 
 const bonuses = [
   "30 days free trial",
@@ -15,7 +18,9 @@ const CTA = () => {
     <section id='cta' className='py-24 grid grid-rows-1 md:grid-cols-2 gap-5'>
       <div>
         <h2 className='text-gray-900 text-5xl font-semibold -tracking-[0.96px] mb-8'>
-          Ready to clear the path to perfect communication?
+          <Typewriter
+            strings={["Ready to clear the path to perfect communication?"]}
+          />
         </h2>
         {bonuses.map(bonus => (
           <div key={bonus} className='flex items-center gap-2'>
@@ -23,12 +28,15 @@ const CTA = () => {
             <p className='text-gray-600 text-2xl'>{bonus}</p>
           </div>
         ))}
-        <div className='flex items-center mt-10 gap-2'>
+        <MotionContainer
+          variants={fadeIn("up", "tween", 0.2, 1)}
+          className='flex items-center mt-10 gap-2'
+        >
           <Button className='bg-white border border-gray-400 text-gray-900'>
             Talk to sales
           </Button>
           <Button>Start your free trial</Button>
-        </div>
+        </MotionContainer>
       </div>
       <div className='relative'>
         <div className='md:absolute flex-[1] -right-[18%]'>
